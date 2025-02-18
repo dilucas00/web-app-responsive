@@ -1,13 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import SideBarM from './components/SideBarM';
-import Table    from './components/Table';
+import App from './App'
+
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-  <SideBarM></SideBarM>
-  <Table></Table>
-  
+    <App></App>
   </StrictMode>,
 )
