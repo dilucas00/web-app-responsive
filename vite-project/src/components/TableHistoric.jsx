@@ -5,6 +5,7 @@ const TableHistoric = () => {
   return (
     <div>
         <LineTable></LineTable>
+        
     </div>
   )
 }

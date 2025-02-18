@@ -3,7 +3,7 @@ import React from 'react'
 const LineTable = () => {
   return (
     <div className='flex w-auto h-80 justify-center items-center content-center flex-col bg-grey mt-7'>
-        <div className='w-65 h-65 border flex flex-row '>
+        <div className=' flex flex-row '>
           <div className='w-8 h-8 rounded-lg bg-[#c5c5c4] m-3 flex justify-center'>
             <img src="/shopping-cart.svg" className='w-5' alt="" />
           </div>
