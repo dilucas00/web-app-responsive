@@ -1,10 +1,10 @@
 function CardExemplo() {
     return (
-      <div className="flex flex-col sm:flex-row items-center justify-center bg-white border rounded-lg p-4 shadow-sm">
+      <div className="flex flex-col w-300 sm:flex-row items-center justify-center bg-white  p-4 shadow-sm">
         {/* Saldo */}
         <div className="flex flex-col items-center m-2">
           <div className="flex items-center gap-2">
-            <span className="bg-green-100 text-green-600 p-2 rounded-full">
+            <span className="bg-green-100 text-green-300 p-2 rounded-full">
               {/* Ícone de Saldo */}
             </span>
             <h3 className="font-semibold text-gray-700">Saldo</h3>
