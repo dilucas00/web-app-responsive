@@ -3,29 +3,29 @@ import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
 import { Card, Col, Row, Statistic } from 'antd';
 
 function CardExample() {
-  return ( // Adicionado return
-    <div className="w-full pt-10 h-50 flex justify-center items-center  ">
-      <Row gutter={16}>
-        <Col span={12} className='lg:w-1/4 sm:w-1/2 w-full'>
-          <Card variant="borderless">
+  return (
+    <div className="w-full bg-white  h-80 flex justify-center items-center mt-10">
+      <Row gutter={16} className="w-full justify-center">
+        <Col xs={24} sm={24} md={12} lg={10} xl={8} className="flex p-2">
+          <Card className="w-full shadow-lg hover:shadow-xl transition-shadow">
             <Statistic
               title="Saldo"
-              value={200.00}
+              value={200.0}
               precision={2}
               valueStyle={{ color: '#3f8600' }}
-              prefix={<ArrowUpOutlined />}
               suffix="R$"
             />
           </Card>
         </Col>
-        <Col span={12}>
-          <Card variant="borderless">
+        
+        <Col xs={24} sm={24} md={12} lg={10} xl={8} className="flex p-2">
+          <Card className="w-full shadow-lg hover:shadow-xl transition-shadow">
             <Statistic
               title="Prejuízos"
-              value={50.00}
+              value={50.0}
               precision={2}
               valueStyle={{ color: '#cf1322' }}
-              prefix={<ArrowDownOutlined />}
+              prefix={`-`}
               suffix="R$"
             />
           </Card>

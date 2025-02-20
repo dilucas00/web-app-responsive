@@ -1,11 +1,10 @@
 import React from 'react';
 import "boxicons/css/boxicons.min.css";
 
-function LineTable  () {
+function LineTable() {
   return (
-    <div className="w-full max-w-2xl mx-auto mt-20 bg-gradient-custom rounded-xl
- p-4 shadow-2xl ">
-      <h3 className="mb-3 font-bold text-2xl text-white font-sans ">Histórico</h3>
+    <div className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto mt-20 bg-gradient-custom rounded-xl p-4 shadow-2xl ">
+      <h3 className="mb-3 font-bold text-2xl text-white font-sans">Histórico</h3>
 
       {/* CONTAINER MERCADO */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center border-b border-gray-200 py-3">
@@ -19,7 +18,7 @@ function LineTable  () {
           </div>
         </div>
         <div className="mt-2 sm:mt-0 sm:ml-auto">
-          <span className="font-bold text-gray-300 font-mono ">R$ -80,00</span>
+          <span className="font-bold text-gray-300 font-mono">R$ -80,00</span>
         </div>
       </div>
 
@@ -35,7 +34,7 @@ function LineTable  () {
           </div>
         </div>
         <div className="mt-2 sm:mt-0 sm:ml-auto">
-          <span className="font-bold text-gray-300 font-mono ">R$ -20,00</span>
+          <span className="font-bold text-gray-300 font-mono">R$ -20,00</span>
         </div>
       </div>
 
@@ -51,11 +50,11 @@ function LineTable  () {
           </div>
         </div>
         <div className="mt-2 sm:mt-0 sm:ml-auto">
-          <span className="font-bold text-green-400 font-mono ">R$ 700,00</span>
+          <span className="font-bold text-green-400 font-mono">R$ 700,00</span>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default LineTable;
