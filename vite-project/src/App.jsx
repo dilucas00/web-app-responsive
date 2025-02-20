@@ -1,8 +1,8 @@
 import './App.css'
 import SideBarM  from './components/SideBarM';
-import TableHistoric from './components/TableHistoric';
 import CardExemplo from './components/CardExample';
-import AddHistoric from './components/AddHistoric';
+import FinanceManager from './components/FinanceManager';
+import 'antd/dist/reset.css'; 
 
 function App() {
 
@@ -11,8 +11,8 @@ function App() {
     <>
       <SideBarM></SideBarM>
       <CardExemplo></CardExemplo>
-      <TableHistoric></TableHistoric>
-      <AddHistoric></AddHistoric>
+      <FinanceManager></FinanceManager>
+      
     </>
   )
 }

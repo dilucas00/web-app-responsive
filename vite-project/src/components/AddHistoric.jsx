@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Modal, Button, Input } from "antd"; // Certifique-se de instalar o Ant Design
+import { Modal, Button, Input } from "antd";
 
-function AddHistoric() {
+function AddHistoric({ onAdd }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [categoria, setCategoria] = useState("");
   const [data, setData] = useState("");
@@ -11,15 +11,34 @@ function AddHistoric() {
   const handleOk = () => setIsModalOpen(false);
   const handleCancel = () => setIsModalOpen(false);
 
+  
+  const formatarData = (data) => {
+    const [ano, mes, dia] = data.split("-");
+    return `${dia}-${mes}-${ano}`;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ categoria, data, valor });
+
+   
+    const dataFormatada = formatarData(data);
+
+    const newTransaction = {
+      category: categoria,
+      date: dataFormatada, 
+      value: parseFloat(valor), 
+    };
+
+    onAdd(newTransaction); 
+    setCategoria("");
+    setData("");
+    setValor("");
     handleOk();
   };
 
   return (
-    <div className="flex justify-center items-center h-80 flex-col">
-      <span className="text-white text-lg font-mono">
+    <div className="flex justify-center bg-[#112942] w-full items-center h-80 flex-col">
+      <span className="text-white text-3xl font-oswald">
         Adicione uma nova transação
       </span>
 
@@ -45,8 +64,6 @@ function AddHistoric() {
       </button>
 
       <Modal
-      
-      
         title="Insira as informações abaixo"
         open={isModalOpen}
         onOk={handleOk}
@@ -54,20 +71,23 @@ function AddHistoric() {
         footer={null} // Remove os botões padrões
       >
         <form onSubmit={handleSubmit} className="flex flex-col gap-5 space-y-3">
+          {/* Campo de Categoria (Texto Livre) */}
           <Input
-            
-            type="text"
             placeholder="Categoria"
             value={categoria}
             onChange={(e) => setCategoria(e.target.value)}
             required
           />
+
+          {/* Campo de Data */}
           <Input
             type="date"
             value={data}
             onChange={(e) => setData(e.target.value)}
             required
           />
+
+          {/* Campo de Valor */}
           <Input
             type="number"
             placeholder="Digite o valor em R$"
@@ -75,6 +95,8 @@ function AddHistoric() {
             onChange={(e) => setValor(e.target.value)}
             required
           />
+
+          {/* Botões de Ação */}
           <div className="flex justify-between mt-4">
             <Button onClick={handleCancel}>Cancelar</Button>
             <Button className="bg-gradient-custom" type="primary" htmlType="submit">

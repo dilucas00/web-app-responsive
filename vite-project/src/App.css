@@ -1,11 +1,10 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
 
 .font-oswald {
     font-family: "Oswald", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
+    
 }
 .font-montserrat{
     font-family: "Montserrat", serif;
@@ -14,6 +13,9 @@
 
 body{
     background-color:#112942;
+}
+html{
+    background-color:#112942
 }
 
 .bg-gradient-custom {
