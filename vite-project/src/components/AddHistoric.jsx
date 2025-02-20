@@ -45,14 +45,17 @@ function AddHistoric() {
       </button>
 
       <Modal
-        title="Cadastro"
+      
+      
+        title="Insira as informações abaixo"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
         footer={null} // Remove os botões padrões
       >
-        <form onSubmit={handleSubmit} className="flex flex-col space-y-3">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-5 space-y-3">
           <Input
+            
             type="text"
             placeholder="Categoria"
             value={categoria}
@@ -67,14 +70,14 @@ function AddHistoric() {
           />
           <Input
             type="number"
-            placeholder="Valor"
+            placeholder="Digite o valor em R$"
             value={valor}
             onChange={(e) => setValor(e.target.value)}
             required
           />
           <div className="flex justify-between mt-4">
             <Button onClick={handleCancel}>Cancelar</Button>
-            <Button type="primary" htmlType="submit">
+            <Button className="bg-gradient-custom" type="primary" htmlType="submit">
               Salvar
             </Button>
           </div>
