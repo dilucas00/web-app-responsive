@@ -3,7 +3,7 @@ import { Card, Col, Row, Statistic } from 'antd';
 
 function CardBalance() {
   return (
-    <div className="w-full bg-white h-65  flex justify-center items-center mt-10">
+    <div className="w-full bg-white h-65  flex justify-center items-center pt-15 mt-30">
       <Row gutter={16} className="w-full justify-center">
         <Col xs={24} sm={24} md={12} lg={10} xl={8} className="flex p-2">
           <Card className="w-full  shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 ">

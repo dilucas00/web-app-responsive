@@ -15,8 +15,8 @@ function SideBarM() {
   );
 
   return (
-    <div className='w-m h-10 bg-[#112942] pt-10 flex flex-row justify-center'>
-      <div className='flex justify-center items-center'>
+    <div className='w-m h-10 mt-12  bg-[#112942] pt-10 flex flex-col justify-center'>
+      <div className='flex h-10 justify-center items-center'>
         <div className='flex items-center justify-center w-10'>
           <Dropdown
             overlay={menu}
@@ -36,8 +36,14 @@ function SideBarM() {
         <div className=''>
           <img src="/finxi-logo.png" alt="" className='w-60' />
         </div>
+        
       </div>
+      <div className='flex ml-10 pt-15 font-montserrat flex-col'>
+          <p className='text-white font-normal text-xl'>Olá Tommy Lipica</p>
+      </div>
+      
     </div>
+    
   );
 }
 
