@@ -3,27 +3,47 @@ import "boxicons/css/boxicons.min.css";
 
 function TableTransaction({ transactions }) {
   return (
-    <div className="w-full bg-gray-50 sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto mt-20 mb-5  rounded-xl p-4  ">
-      <h3 className="mb-3 font-bold text-2xl text-black font-oswald">Ultimas transações</h3>
-
-      {transactions.map((transaction, index) => (
-      <div key={index} className="flex flex-col sm:flex-row items-start sm:items-center py-3">
-        <div className="flex items-center">
-          <div className="w-8 h-8 rounded-lg bg-[#c5c5c4] flex justify-center items-center mr-3">
-            <i className={`${transaction.icon} bx-sm`}></i>
-          </div>
-          <div>
-            <h3 className="font-bold font-montserrat text-black">{transaction.category}</h3>
-            <p className="font-light text-xs font-montserrat text-black">{transaction.date}</p>
-          </div>
-        </div>
-        <div className="mt-2 sm:mt-0 sm:ml-auto">
-          <span className={`${transaction.color} font-normal text-black font-oswald`}>
-            R$ {transaction.value.toFixed(2)} {/* Exibe o valor como foi salvo */}
-          </span>
-        </div>
+    <div className="w-full max-w-2xl mx-auto mt-6 mb-5 rounded-2xl bg-white shadow-lg">
+      <div className="px-6 py-5 border-b border-gray-100">
+        <h3 className="text-xl font-semibold text-[#0F2A3D] font-oswald">
+          Últimas Transações
+        </h3>
       </div>
-    ))}
+
+      <div className="divide-y divide-gray-100">
+        {transactions.map((transaction, index) => (
+          <div 
+            key={index} 
+            className="flex items-center justify-between px-6 py-4 hover:bg-gray-50 transition-colors"
+          >
+            {/* Ícone e detalhes */}
+            <div className="flex items-center space-x-4 flex-1">
+              <div className={`w-12 h-12 rounded-xl flex justify-center items-center 
+                ${transaction.value < 0 ? 'bg-red-100/80' : 'bg-emerald-100/80'}`}>
+                <i className={`${transaction.icon} bx-sm ${
+                  transaction.value < 0 ? 'text-red-600' : 'text-emerald-600'
+                }`}></i>
+              </div>
+              <div className="flex-1">
+                <h3 className="font-medium text-gray-900 text-base">{transaction.category}</h3>
+                <p className="text-xs text-gray-400 mt-1">{transaction.date}</p>
+              </div>
+            </div>
+
+            {/* Valor da transação */}
+            <div className="ml-4">
+              <span className={`font-semibold text-lg font-mono ${
+                transaction.value < 0 ? 'text-red-600' : 'text-emerald-600'
+              }`}>
+                {transaction.value < 0 ? '-' : '+'} R${' '}
+                <span className="text-gray-800">
+                  {Math.abs(transaction.value).toFixed(2)}
+                </span>
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
