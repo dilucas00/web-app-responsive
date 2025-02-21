@@ -9,7 +9,7 @@ function FinanceManager() {
       date: "16-02-2025",
       value: -80,
       icon: "bx bxs-cart",
-      color: "text-black"
+      color: "text-gray"
     },
     {
       category: "Transporte",
@@ -49,10 +49,9 @@ function FinanceManager() {
   })[category] || "bx bx-question-mark";
 
   return (
-    <div className="min-h-screen bg-white p-4">
+    <div className="min-h-screen  bg-white shadow-2xl p-4">
         <LineTable transactions={transactions} />
         <AddHistoric onAdd={handleAddTransaction} />
-      
     </div>
   );
 }

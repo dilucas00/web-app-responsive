@@ -3,7 +3,7 @@ import "boxicons/css/boxicons.min.css";
 
 function LineTable({ transactions }) {
   return (
-    <div className="w-full bg=[#112942] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto mt-20 mb-30  rounded-xl p-4 shadow- ">
+    <div className="w-full  sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto mt-20 mb-5  rounded-xl p-4 shadow- ">
       <h3 className="mb-3 font-bold text-2xl text-black font-oswald">Ultimas transações</h3>
 
       {transactions.map((transaction, index) => (

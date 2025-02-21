@@ -38,7 +38,7 @@ function AddHistoric({ onAdd }) {
 
   return (
     <div className="flex justify-center bg-white w-full gap-5 items-center h-60 flex-col">
-      <span className="text-black font-light text-3xl font-oswald">
+      <span className="text-black font-light text-2xl font-oswald">
         Adicione uma nova transação
       </span>
 
