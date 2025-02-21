@@ -32,7 +32,7 @@ function SideBarM() {
   );
 
   return (
-    <div className="w-full bg-[#0F2A3D] sticky top-0 z-50 shadow-sm border-b border-[#1a3d54]">
+    <div className="w-full bg-[#0F2A3D]  top-0 z-50 shadow-sm border-b border-[#1a3d54]">
       <div className="max-w-2xl mx-auto px-4">
         {/* Header Superior */}
         <div className="h-16 flex items-center justify-between">

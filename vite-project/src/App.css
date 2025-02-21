@@ -29,7 +29,6 @@ body {
   @media (pointer: coarse) {
     html {
       scroll-behavior: smooth;
-    }
-  }
+    }}
 
   
