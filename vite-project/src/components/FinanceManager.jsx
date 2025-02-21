@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import LineTable from './LineTable';
-import AddHistoric from './AddHistoric';
+import TableTransaction from './TableTransaction';
+import AddTransaction from './AddTransaction';
 
 function FinanceManager() {
   const [transactions, setTransactions] = useState([
@@ -16,7 +16,7 @@ function FinanceManager() {
       date: "12-02-2025",
       value: -20,
       icon: "bx bxs-car",
-      color: "text-black"
+      color: "text-green"
     },
     {
       category: "Salário",
@@ -50,8 +50,8 @@ function FinanceManager() {
 
   return (
     <div className="min-h-screen  bg-white shadow-2xl p-4">
-        <LineTable transactions={transactions} />
-        <AddHistoric onAdd={handleAddTransaction} />
+        <TableTransaction transactions={transactions} />
+        <AddTransaction onAdd={handleAddTransaction} />
     </div>
   );
 }

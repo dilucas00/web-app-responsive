@@ -1,19 +1,18 @@
 import React from 'react';
-import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
 import { Card, Col, Row, Statistic } from 'antd';
 
-function CardExample() {
+function CardBalance() {
   return (
     <div className="w-full bg-white h-65  flex justify-center items-center mt-10">
       <Row gutter={16} className="w-full justify-center">
         <Col xs={24} sm={24} md={12} lg={10} xl={8} className="flex p-2">
-          <Card className="w-full shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 ">
+          <Card className="w-full  shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300 ">
             <Statistic
-              className='font-oswald'
+              className='font-oswald '
               title="Saldo Disponivel (mês)"
               value={200.0}
               precision={2}
-              valueStyle={{ color: '#3f8600' }}
+              valueStyle={{ color: '#62DA98' }}
               suffix="R$"
             />
           </Card>
@@ -37,4 +36,4 @@ function CardExample() {
   );
 }
 
-export default CardExample;
+export default CardBalance;

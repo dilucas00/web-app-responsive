@@ -7,7 +7,7 @@ function SideBarM() {
 
   // Itens do menu do dropdown
   const menu = (
-    <Menu>
+    <Menu className='bg-sky-400'>
       <Menu.Item key="1">Opção 1</Menu.Item>
       <Menu.Item key="2">Opção 2</Menu.Item>
       <Menu.Item key="3">Opção 3</Menu.Item>

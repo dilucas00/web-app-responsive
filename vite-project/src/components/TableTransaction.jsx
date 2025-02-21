@@ -1,7 +1,7 @@
 import React from 'react';
 import "boxicons/css/boxicons.min.css";
 
-function LineTable({ transactions }) {
+function TableTransaction({ transactions }) {
   return (
     <div className="w-full  sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto mt-20 mb-5  rounded-xl p-4 shadow- ">
       <h3 className="mb-3 font-bold text-2xl text-black font-oswald">Ultimas transações</h3>
@@ -18,7 +18,7 @@ function LineTable({ transactions }) {
           </div>
         </div>
         <div className="mt-2 sm:mt-0 sm:ml-auto">
-          <span className={`${transaction.color} font-bold text-black font-oswald`}>
+          <span className={`${transaction.color} font-normal text-black font-oswald`}>
             R$ {transaction.value.toFixed(2)} {/* Exibe o valor como foi salvo */}
           </span>
         </div>
@@ -28,4 +28,4 @@ function LineTable({ transactions }) {
   );
 }
 
-export default LineTable;
+export default TableTransaction;

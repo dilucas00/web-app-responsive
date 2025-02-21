@@ -1,8 +1,9 @@
 import './App.css'
 import SideBarM  from './components/SideBarM';
-import CardExemplo from './components/CardExample';
+import CardBalance from './components/CardBalance';
 import FinanceManager from './components/FinanceManager';
 import 'antd/dist/reset.css'; 
+
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
   return (
     <>
       <SideBarM></SideBarM>
-      <CardExemplo></CardExemplo>
+      <CardBalance></CardBalance>
       <FinanceManager></FinanceManager>
       
 

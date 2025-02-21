@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Modal, Button, Input } from "antd";
 
-function AddHistoric({ onAdd }) {
+function AddTransaction({ onAdd }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [categoria, setCategoria] = useState("");
   const [data, setData] = useState("");
@@ -68,7 +68,7 @@ function AddHistoric({ onAdd }) {
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
-        footer={null} // Remove os botões padrões
+        footer={null} 
       >
         <form onSubmit={handleSubmit} className="flex flex-col gap-5 space-y-3">
           {/* Campo de Categoria (Texto Livre) */}
@@ -109,4 +109,4 @@ function AddHistoric({ onAdd }) {
   );
 }
 
-export default AddHistoric;
+export default AddTransaction;
