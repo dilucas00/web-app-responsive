@@ -14,9 +14,7 @@
 body{
     background-color:#112942;
 }
-html{
-    background-color:#112942
-}
+
 
 .bg-gradient-custom {
     background-image: linear-gradient(195deg, #1B3C5F, #397DC5);

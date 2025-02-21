@@ -3,8 +3,8 @@ import "boxicons/css/boxicons.min.css";
 
 function LineTable({ transactions }) {
   return (
-    <div className="w-full bg-gradient-custom sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto mt-20  rounded-xl p-4 shadow-2xl ">
-      <h3 className="mb-3 font-bold text-2xl text-white font-oswald">Histórico</h3>
+    <div className="w-full bg=[#112942] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto mt-20 mb-30  rounded-xl p-4 shadow- ">
+      <h3 className="mb-3 font-bold text-2xl text-black font-oswald">Ultimas transações</h3>
 
       {transactions.map((transaction, index) => (
       <div key={index} className="flex flex-col sm:flex-row items-start sm:items-center py-3">
@@ -13,12 +13,12 @@ function LineTable({ transactions }) {
             <i className={`${transaction.icon} bx-sm`}></i>
           </div>
           <div>
-            <h3 className="font-bold font-montserrat text-white">{transaction.category}</h3>
-            <p className="font-light text-xs font-montserrat text-white">{transaction.date}</p>
+            <h3 className="font-bold font-montserrat text-black">{transaction.category}</h3>
+            <p className="font-light text-xs font-montserrat text-black">{transaction.date}</p>
           </div>
         </div>
         <div className="mt-2 sm:mt-0 sm:ml-auto">
-          <span className={`${transaction.color} font-bold font-oswald`}>
+          <span className={`${transaction.color} font-bold text-black font-oswald`}>
             R$ {transaction.value.toFixed(2)} {/* Exibe o valor como foi salvo */}
           </span>
         </div>

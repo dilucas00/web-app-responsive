@@ -9,14 +9,14 @@ function FinanceManager() {
       date: "16-02-2025",
       value: -80,
       icon: "bx bxs-cart",
-      color: "text-gray-300"
+      color: "text-black"
     },
     {
       category: "Transporte",
       date: "12-02-2025",
       value: -20,
       icon: "bx bxs-car",
-      color: "text-gray-300"
+      color: "text-black"
     },
     {
       category: "Salário",
@@ -36,7 +36,7 @@ function FinanceManager() {
         icon: getIconByCategory(newTransaction.category),
         color: newTransaction.category === "Salário" 
           ? "text-green-400" 
-          : "text-gray-300"
+          : "text-black-400"
       });
       return updatedTransactions;
     });
@@ -49,7 +49,7 @@ function FinanceManager() {
   })[category] || "bx bx-question-mark";
 
   return (
-    <div className="min-h-screen bg-[#112942] p-4">
+    <div className="min-h-screen bg-white p-4">
         <LineTable transactions={transactions} />
         <AddHistoric onAdd={handleAddTransaction} />
       

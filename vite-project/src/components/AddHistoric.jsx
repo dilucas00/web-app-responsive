@@ -37,22 +37,22 @@ function AddHistoric({ onAdd }) {
   };
 
   return (
-    <div className="flex justify-center bg-[#112942] w-full items-center h-80 flex-col">
-      <span className="text-white text-3xl font-oswald">
+    <div className="flex justify-center bg-white w-full gap-5 items-center h-60 flex-col">
+      <span className="text-black font-light text-3xl font-oswald">
         Adicione uma nova transação
       </span>
 
       <button
         onClick={showModal}
         title="Adicionar nova transação"
-        className="group cursor-pointer outline-none hover:rotate-90 duration-300 mt-10"
+        className="group cursor-pointer outline-none hover:rotate-90 duration-300 mt-20"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="50px"
           height="50px"
           viewBox="0 0 24 24"
-          className="stroke-zinc-400 fill-none group-hover:fill-zinc-800 group-active:stroke-zinc-200 group-active:fill-zinc-600 group-active:duration-0 duration-300"
+          class="stroke-green-400 fill-none group-hover:fill-green-800 group-active:stroke-green-200 group-active:fill-green-600 group-active:duration-0 duration-300"
         >
           <path
             d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
