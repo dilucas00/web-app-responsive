@@ -1,0 +1,9 @@
+[build]
+  base = "finxi-webapp"
+  command = "npm install && npm run build"
+  publish = "finxi-webapp/build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
