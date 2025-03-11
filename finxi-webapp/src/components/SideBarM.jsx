@@ -33,7 +33,7 @@ function SideBarM() {
 
   return (
     <div className="w-full bg-[#0F2A3D]  top-0 z-50 shadow-sm border-b border-[#1a3d54]">
-      <div className="max-w-2xl mx-auto px-4">
+      <div className="px-4">
         {/* Header Superior */}
         <div className="h-16 flex items-center justify-between">
           {/* Ícone do Menu */}
@@ -67,12 +67,12 @@ function SideBarM() {
           <div className="flex-1" />
         </div>
 
-        {/* Saudação do Usuário */}
-        <div className="pt-5 pb-4">
-          <p className="text-white font-medium text-[18px] leading-tight">
+       
+        <div className="pt-4 ">
+          <p className="text-white font-medium text-[16px] leading-tight">
             Olá, Geraldo
           </p>
-          <p className="text-[#7c9cad] text-sm mt-0.5">
+          <p className="text-[#7c9cad] text-xs mt-0.5">
             Bem-vindo de volta
           </p>
         </div>
