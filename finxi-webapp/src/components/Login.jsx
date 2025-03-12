@@ -8,16 +8,16 @@ function Login(){
             <img src="/public/finxi-logo.png" className='w-50 h-50' alt="" />
         </div>
         <div>
-            <div className='flex flex-col items-center gap-10'>
+            <div className='flex flex-col items-center gap-8'>
                 <div className='flex items-start w-60'>
                     <h4 className='text-white'>Crie sua conta</h4>
                 </div>
-                <input className='bg-white w-60 h-8 '></input>
-                <input className='bg-white w-60 h-8 '></input>
-                <input className='bg-white w-60 h-8 '></input>
+                <input placeholder='Email' className='bg-white w-60 h-10 text-sm outline-none rounded-xl p-3'></input>
+                <input placeholder='Senha' className='bg-white w-60 h-10 text-sm outline-none rounded-xl p-3 '></input>
+                <input placeholder='Confirme sua senha' className='bg-white w-60 h-10 text-sm outline-none rounded-xl p-3 '></input>
                 <button className='bg- text-white'>Buscar</button>
             </div>
-            <div className='flex items center justify-center w-60'>
+            <div className='flex items-centercenter justify-center w-full'>
                 <p className='text-white'>Ou cadastre-se com:</p>
             </div>
             <div>
