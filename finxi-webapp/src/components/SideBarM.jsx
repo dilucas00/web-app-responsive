@@ -1,17 +1,23 @@
 import { useState } from 'react';
 import { Dropdown, Menu } from 'antd';
 import '../App.css';
+import { useNavigate } from 'react-router-dom';
 import "boxicons/css/boxicons.min.css";
 
 function SideBarM() {
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    navigate('/login');
+  };
 
   const menu = (
     <Menu className="bg-white rounded-xl shadow-2xl py-3 min-w-[220px]">
       <Menu.Item key="1" className="px-6 py-4 hover:bg-gray-50/80">
         <div className="flex items-center gap-3 text-base font-medium text-gray-700">
           <i className="bx bx-user-circle text-xl text-[#0F2A3D]"></i>
-          <span>Meu Perfil</span>
+          <span onClick={handleLoginClick}>Meu Perfil</span>
         </div>
       </Menu.Item>
       
