@@ -13,12 +13,12 @@ function Login(){
                     <h4 className='text-white'>Crie sua conta</h4>
                 </div>
                 <input className='bg-white w-60 h-8 '></input>
-                <input className='bg-white w-60 '></input>
-                <input className='bg-white w-60 '></input>
+                <input className='bg-white w-60 h-8 '></input>
+                <input className='bg-white w-60 h-8 '></input>
                 <button className='bg- text-white'>Buscar</button>
             </div>
-            <div>
-                <p>Ou cadastre-se com:</p>
+            <div className='flex items center justify-center w-60'>
+                <p className='text-white'>Ou cadastre-se com:</p>
             </div>
             <div>
                 Icone Facebook
