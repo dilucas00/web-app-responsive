@@ -1,8 +1,6 @@
-import './App.css'
+import "./App.css"
 import React from 'react';
-import SideBarM  from './components/SideBarM';
-import CardBalance from './components/CardBalance';
-import FinanceManager from './components/FinanceManager';
+import Home from "./components/Home"
 import 'antd/dist/reset.css'; 
 
 
@@ -10,11 +8,8 @@ function App() {
 
 
   return (
-    <>
-      <SideBarM></SideBarM>
-      <CardBalance></CardBalance>
-      <FinanceManager></FinanceManager>
-    </>
+    <Home></Home>
+   
   )
 }
 
