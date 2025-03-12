@@ -22,7 +22,6 @@ body{
 }
 body {
     -webkit-tap-highlight-color: transparent;
-    background: #f5f7fa;
   }
   
   /* Scroll suave para mobile */
@@ -31,4 +30,3 @@ body {
       scroll-behavior: smooth;
     }}
 
-  
