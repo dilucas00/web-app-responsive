@@ -13,6 +13,7 @@
 
 body{
     background-color:#112942;
+    
 }
 
 
@@ -22,6 +23,8 @@ body{
 }
 body {
     -webkit-tap-highlight-color: transparent;
+    background-color:white;
+  
   }
   
   /* Scroll suave para mobile */
