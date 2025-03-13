@@ -44,12 +44,12 @@ function SideBarM() {
         <div className="h-16 flex items-center justify-between">
           {/* Ícone do Menu */}
           <div className="flex-1">
-            <Dropdown
-              overlay={menu}
+          <Dropdown
+              menu={menu} 
               trigger={['click']}
-              visible={dropdownVisible}
-              onVisibleChange={(visible) => setDropdownVisible(visible)}
-              overlayClassName="dropdown-overlay"
+              open={dropdownVisible}
+              onOpenChange={(open) => setDropdownVisible(open)} 
+              dropdownClassName="dropdown-overlay" 
             >
               <img 
                 src="/Menu.png" 

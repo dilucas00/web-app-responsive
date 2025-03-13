@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TableTransaction from './TableTransaction';
 import AddTransaction from './AddTransaction';
+import CardBalance from './CardBalance';
 
 function FinanceManager() {
   const [transactions, setTransactions] = useState([
@@ -27,12 +28,18 @@ function FinanceManager() {
     }
   ]);
 
+  // Calcula os totais
+  const totalBalance = transactions.reduce((acc, transaction) => acc + transaction.value, 0);
+  const monthlyExpense = transactions
+    .filter(transaction => transaction.value < 0)
+    .reduce((acc, transaction) => acc + Math.abs(transaction.value), 0);
+
   const handleAddTransaction = (newTransaction) => {
     setTransactions(prev => {
       const updatedTransactions = [...prev];
       updatedTransactions.splice(prev.length - 1, 0, {
         ...newTransaction,
-        value: parseFloat(newTransaction.value), 
+        value: parseFloat(newTransaction.value),
         icon: getIconByCategory(newTransaction.category),
         color: newTransaction.category === "Salário" 
           ? "text-green-400" 
@@ -49,9 +56,13 @@ function FinanceManager() {
   })[category] || "bx bx-question-mark";
 
   return (
-    <div className="min-h-screen bg-white  p-4">
-        <TableTransaction transactions={transactions} />
-        <AddTransaction onAdd={handleAddTransaction} />
+    <div className="min-h-screen bg-white p-4">
+      <CardBalance 
+        totalBalance={totalBalance} 
+        monthlyExpense={monthlyExpense} 
+      />
+      <TableTransaction transactions={transactions} />
+      <AddTransaction onAdd={handleAddTransaction} />
     </div>
   );
 }

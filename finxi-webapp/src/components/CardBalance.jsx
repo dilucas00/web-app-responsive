@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CardBalance() {
+function CardBalance({ totalBalance = 0, monthlyExpense = 0 }) {
   return (
     <div className="w-full h-80 p-2 mt-4">
       <div className="grid grid-cols-1 gap-3">
@@ -13,10 +13,14 @@ function CardBalance() {
               </span>
               <div className="flex items-center space-x-1">
                 <span className="text-lg font-bold text-emerald-600">R$</span>
-                <span className="text-2xl font-extrabold text-gray-800">200,00</span>
+                <span className="text-2xl font-extrabold text-gray-800">
+                  {totalBalance.toLocaleString('pt-BR', { 
+                    minimumFractionDigits: 2, 
+                    maximumFractionDigits: 2 
+                  })}
+                </span>
               </div>
             </div>
-          
           </div>
           <div className="mt-2 pt-2 border-t border-gray-50">
             <span className="text-xs text-gray-400">Disponível este mês</span>
@@ -32,11 +36,14 @@ function CardBalance() {
               </span>
               <div className="flex items-center space-x-1">
                 <span className="text-lg font-bold text-rose-500">- R$</span>
-                <span className="text-2xl font-extrabold text-gray-800">50,00</span>
+                <span className="text-2xl font-extrabold text-gray-800">
+                  {monthlyExpense.toLocaleString('pt-BR', { 
+                    minimumFractionDigits: 2, 
+                    maximumFractionDigits: 2 
+                  })}
+                </span>
               </div>
             </div>
-      
-            
           </div>
           <div className="mt-2 pt-2 border-t border-gray-50">
             <span className="text-xs text-gray-400">Total gasto este mês</span>

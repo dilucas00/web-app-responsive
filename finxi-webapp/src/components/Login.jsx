@@ -1,7 +1,15 @@
 import React from 'react'
 import "../Login.css"
+import { useNavigate } from 'react-router-dom';
+
 
 function Login(){
+    const navigate = useNavigate();
+
+    const handleHomeClick = () => {
+        navigate('/');
+      };
+
     return(
        <div className='w-full bg-[#112942] h-full'>
         <div className='flex flex-col justify-center items-center content-center    '>
@@ -12,6 +20,8 @@ function Login(){
                 <div className='flex items-center justify-center w-full'>
                     <h4 className='text-white text-2xl font-oswald'>Crie sua conta</h4>
                 </div>
+
+      
 
                 {/* INPUT EMAIL */}
                 <div
@@ -89,8 +99,10 @@ function Login(){
                 />
                 </div>
 
+                
+
                 <div className='m-5'>
-                    <button className='bg-[#7BDAA5] text-white w-65 h-10 text-sm font-bold shadow-black shadow font-montserrat cursor-pointer hover:scale-105 transition'>Cadastrar</button>
+                    <button onClick={handleHomeClick} className='bg-[#7BDAA5] text-white w-65 h-10 text-sm font-bold shadow-black shadow font-montserrat cursor-pointer hover:scale-105 transition'>Cadastrar</button>
                 </div>
             </div>
             <div className='flex items-centercenter justify-center pt-5 w-full'>
