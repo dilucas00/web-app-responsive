@@ -5,6 +5,9 @@ body{
 input{
     color:white;
 }
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+ }
 button{
     color:white;
 }
@@ -12,4 +15,5 @@ button{
 input::placeholder{
     font-size: 14px;
     color:rgb(207, 206, 206);
+    font-family: "Montserrat", serif;
 }
