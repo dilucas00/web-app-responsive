@@ -12,6 +12,8 @@ function Login(){
                 <div className='flex items-center justify-center w-full'>
                     <h4 className='text-white text-2xl font-oswald'>Crie sua conta</h4>
                 </div>
+
+                {/* INPUT EMAIL */}
                 <div
                 className="shadow-lg flex gap-2 items-center bg-white p-2 hover:shadow-xl  duration-300 hover:border-2 border-gray-400 group rounded-md"
                 >
@@ -20,8 +22,8 @@ function Login(){
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
-                    height="1em"
-                    width="1em"
+                    height="1.5em"
+                    width="1.5em"
                 >
                     <path
                     d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
@@ -36,18 +38,59 @@ function Login(){
                 />
                 </div>
 
-                <div className='flex flex-col'> 
-                    <label htmlFor="" className='text-gray-200 text-sm'>Senha</label>
-                    <input placeholder='Digite sua senha' className='bg-transparent border-1 rounded-b-sm border-gray-400 w-60 h-10 text-sm outline-none transition-all  text-red placeholder:text-gray-700 placeholder:font-extralight placeholder:text-xs font-montserrat  p-3'></input>
+                {/* INPUT SENHA */}
+
+                <div
+                className="shadow-lg flex gap-2 items-center bg-white p-2 hover:shadow-xl  duration-300 hover:border-2 border-gray-400 group rounded-md"
+                >
+                <svg
+                    class="group-hover:rotate-[360deg] duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    height="1.5em"
+                    width="1.5em"
+                >
+                    <path d="M6 10V7a6 6 0 0 1 12 0v3" />
+                    <rect x="4" y="10" width="16" height="12" rx="2" />
+                    <path d="M12 16v2" />
+                </svg>
+                <input
+                    type="password"
+                    name="password"
+                    className="flex-1  focus:outline-none"
+                    placeholder="Senha"
+                />
                 </div>
 
-                <div className='flex flex-col'> 
-                    <label htmlFor="" className='text-gray-200 text-sm'>Confirmar senha</label>
-                    <input placeholder='Repita sua senha' className='bg-transparent border-1 rounded-b-sm border-gray-400 w-60 h-10 text-sm outline-none transition-all  text-red placeholder:text-gray-200 placeholder:font-extralight placeholder:text-xs font-montserrat  p-3'></input>
+                {/* INPUT CONFIRMAR SENHA */}
+
+                <div
+                className="shadow-lg flex gap-2 items-center bg-white p-2 hover:shadow-xl  duration-300 hover:border-2 border-gray-400 group rounded-md"
+                >
+                <svg
+                    class="group-hover:rotate-[360deg] duration-300"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    height="1.5em"
+                    width="1.5em"
+                >
+                    <rect x="6" y="10" width="12" height="10" rx="2" />
+                    <path d="M9 10V7a3 3 0 0 1 6 0v3" />
+                    <circle cx="12" cy="15" r="1" />
+                    <path d="M12 16v2" />
+                </svg>
+                <input
+                    type="password"
+                    name="password"
+                    className="flex-1  focus:outline-none"
+                    placeholder="Senha"
+                />
                 </div>
 
                 <div className='m-5'>
-                    <button className='bg-[#7BDAA5] text-white w-65 h-10 text-sm font-bold shadow-black shadow shadow font-montserrat cursor-pointer hover:scale-105 transition'>Cadastrar</button>
+                    <button className='bg-[#7BDAA5] text-white w-65 h-10 text-sm font-bold shadow-black shadow font-montserrat cursor-pointer hover:scale-105 transition'>Cadastrar</button>
                 </div>
             </div>
             <div className='flex items-centercenter justify-center pt-5 w-full'>

@@ -2,9 +2,7 @@ body{
      background-color: #112942; 
 
 }
-input{
-   
-}
+
 input:focus::-webkit-input-placeholder {
     color: transparent;
  }
