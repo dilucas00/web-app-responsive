@@ -3,7 +3,7 @@ import "../Login.css"
 
 function Login(){
     return(
-       <div className='w-full h-full'>
+       <div className='w-full bg-[#112942] h-full'>
         <div className='flex flex-col justify-center items-center content-center    '>
             <img src="/finxi-logo.png" className='w-60 h-60' alt="" />
         </div>
@@ -76,16 +76,16 @@ function Login(){
                     height="1.5em"
                     width="1.5em"
                 >
-                    <rect x="6" y="10" width="12" height="10" rx="2" />
-                    <path d="M9 10V7a3 3 0 0 1 6 0v3" />
-                    <circle cx="12" cy="15" r="1" />
+                   <path d="M6 10V7a6 6 0 0 1 12 0v3" />
+                    <rect x="4" y="10" width="16" height="12" rx="2" />
                     <path d="M12 16v2" />
+
                 </svg>
                 <input
                     type="password"
                     name="password"
                     className="flex-1  focus:outline-none"
-                    placeholder="Senha"
+                    placeholder="Confirmar senha"
                 />
                 </div>
 
