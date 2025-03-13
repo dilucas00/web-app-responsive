@@ -19,13 +19,7 @@ function FinanceManager() {
       icon: "bx bxs-car",
       color: "text-green"
     },
-    {
-      category: "Salário",
-      date: "05-02-2025",
-      value: 700,
-      icon: "bx bx-money",
-      color: "text-green-400"
-    }
+   
   ]);
 
   // Calcula os totais
@@ -40,10 +34,10 @@ function FinanceManager() {
       updatedTransactions.splice(prev.length - 1, 0, {
         ...newTransaction,
         value: parseFloat(newTransaction.value),
-        icon: getIconByCategory(newTransaction.category),
+        icon: newTransaction.icon, 
         color: newTransaction.category === "Salário" 
           ? "text-green-400" 
-          : "text-black-400"
+          : "text-gray-600" 
       });
       return updatedTransactions;
     });

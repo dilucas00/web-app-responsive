@@ -11,7 +11,7 @@ function Login(){
       };
 
     return(
-       <div className='w-full bg-[#112942] h-full'>
+       <div className='w-full bg-[#112942] h-auto'>
         <div className='flex flex-col justify-center items-center content-center    '>
             <img src="/finxi-logo.png" className='w-60 h-60' alt="" />
         </div>
@@ -116,10 +116,12 @@ function Login(){
                     <img src="/icons8-google-logo-32.png" className='w-10 h-10' alt="" />
                 </div>
             </div>
-           
-           
         </div>
-
+        <footer>
+            <div className='flex justify-center items-center border-t-1 border-gray-600 font-montserrat text-xl p-5 text-white'>
+                <p>Ja tem conta? Clique <a className='font-bold cursor-pointer text-[#7BDAA5] '> aqui </a></p>
+            </div>
+        </footer>
        </div>
         
     )

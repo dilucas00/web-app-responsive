@@ -3,47 +3,38 @@ import "boxicons/css/boxicons.min.css";
 
 function TableTransaction({ transactions }) {
   return (
-    <div className="w-full max-w-2xl mx-auto mt-6 mb-5 rounded-2xl bg-white shadow-lg">
-      <div className="px-6 py-5 border-b border-gray-100">
-        <h3 className="text-xl font-semibold text-[#0F2A3D] font-oswald">
-          Últimas Transações
-        </h3>
-      </div>
-
-      <div className="divide-y divide-gray-100">
-        {transactions.map((transaction, index) => (
-          <div 
-            key={index} 
-            className="flex items-center justify-between px-6 py-4 hover:bg-gray-50 transition-colors"
-          >
-            {/* Ícone e detalhes */}
-            <div className="flex items-center space-x-4 flex-1">
-              <div className={`w-12 h-12 rounded-xl flex justify-center items-center 
-                ${transaction.value < 0 ? 'bg-red-100/80' : 'bg-emerald-100/80'}`}>
-                <i className={`${transaction.icon} bx-sm ${
-                  transaction.value < 0 ? 'text-red-600' : 'text-emerald-600'
-                }`}></i>
-              </div>
-              <div className="flex-1">
-                <h3 className="font-medium text-gray-900 text-base">{transaction.category}</h3>
-                <p className="text-xs text-gray-400 mt-1">{transaction.date}</p>
-              </div>
-            </div>
-
-            {/* Valor da transação */}
-            <div className="ml-4">
-              <span className={`font-semibold text-lg font-mono ${
-                transaction.value < 0 ? 'text-red-600' : 'text-emerald-600'
+    <div className="overflow-x-auto flex justify-center mt-6">
+      <table className="w-full">
+        <thead className="bg-gray-50">
+          <tr>
+            <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Categoria</th>
+            <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Data</th>
+            <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Valor</th>
+          </tr>
+        </thead>
+        
+        <tbody className="bg-white divide-y divide-gray-200">
+          {transactions.map((transaction, index) => (
+            <tr key={index}>
+              <td className="px-4 py-4 whitespace-nowrap">
+                <div className="flex items-center">
+                  {/* Ícone adicionado aqui */}
+                  <i className={`${transaction.icon || 'bx bx-question-mark'} text-xl mr-3 ${transaction.color || 'text-gray-600'}`}></i>
+                  <span className="text-sm text-gray-900">{transaction.category}</span>
+                </div>
+              </td>
+              <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-500">
+                {transaction.date}
+              </td>
+              <td className={`px-4 py-4 whitespace-nowrap text-sm font-semibold ${
+                transaction.value >= 0 ? 'text-green-600' : 'text-red-600'
               }`}>
-                {transaction.value < 0 ? '-' : '+'} R${' '}
-                <span className="text-gray-800">
-                  {Math.abs(transaction.value).toFixed(2)}
-                </span>
-              </span>
-            </div>
-          </div>
-        ))}
-      </div>
+                R$ {Math.abs(transaction.value).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
