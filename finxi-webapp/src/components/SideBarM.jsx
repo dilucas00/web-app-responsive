@@ -5,60 +5,65 @@ import { useNavigate } from 'react-router-dom';
 import "boxicons/css/boxicons.min.css";
 
 function SideBarM() {
-  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false); // Renomeie o estado
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
     navigate('/login');
   };
 
-  const menu = (
-    <Menu className="bg-white rounded-xl shadow-2xl py-3 min-w-[220px]">
-      <Menu.Item key="1" className="px-6 py-4 hover:bg-gray-50/80">
-        <div className="flex items-center gap-3 text-base font-medium text-gray-700">
+  // Estrutura do menu usando a sintaxe do Ant Design v5+
+  const menuItems = [
+    {
+      key: '1',
+      label: (
+        <div className="flex items-center gap-3 text-base font-medium text-gray-700 px-6 py-4 hover:bg-gray-50/80">
           <i className="bx bx-user-circle text-xl text-[#0F2A3D]"></i>
           <span onClick={handleLoginClick}>Meu Perfil</span>
         </div>
-      </Menu.Item>
-      
-      <Menu.Item key="2" className="px-6 py-4 hover:bg-gray-50/80">
-        <div className="flex items-center gap-3 text-base font-medium text-gray-700">
+      ),
+    },
+    {
+      key: '2',
+      label: (
+        <div className="flex items-center gap-3 text-base font-medium text-gray-700 px-6 py-4 hover:bg-gray-50/80">
           <i className="bx bx-pie-chart-alt-2 text-xl text-[#0F2A3D]"></i>
           <span>Estatísticas</span>
         </div>
-      </Menu.Item>
-      
-      <Menu.Item key="3" className="px-6 py-4 hover:bg-gray-50/80">
-        <div className="flex items-center gap-3 text-base font-medium text-gray-700">
+      ),
+    },
+    {
+      key: '3',
+      label: (
+        <div className="flex items-center gap-3 text-base font-medium text-gray-700 px-6 py-4 hover:bg-gray-50/80">
           <i className="bx bx-cog text-xl text-[#0F2A3D]"></i>
           <span>Configurações</span>
         </div>
-      </Menu.Item>
-    </Menu>
-  );
+      ),
+    },
+  ];
 
   return (
-    <div className="w-full bg-[#0F2A3D]  top-0 z-50 shadow-sm border-b border-[#1a3d54]">
+    <div className="w-full bg-[#0F2A3D] top-0 z-50 shadow-sm border-b border-[#1a3d54]">
       <div className="px-4">
-        {/* Header Superior */}
         <div className="h-16 flex items-center justify-between">
-          {/* Ícone do Menu */}
           <div className="flex-1">
-          <Dropdown
-              menu={menu} 
+            <Dropdown
+              menu={{ items: menuItems }} // Sintaxe correta do Ant Design v5
               trigger={['click']}
-              open={dropdownVisible}
-              onOpenChange={(open) => setDropdownVisible(open)} 
-              dropdownClassName="dropdown-overlay" 
+              open={dropdownOpen}
+              onOpenChange={(open) => setDropdownOpen(open)}
+              dropdownClassName="dropdown-overlay"
             >
+              {/* Remova o onClick e o e.preventDefault() */}
               <img 
                 src="/Menu.png" 
                 alt="Dropdown Menu"
                 className="w-7 h-7 cursor-pointer active:opacity-70 transition-opacity hover:scale-110"
-                onClick={(e) => e.preventDefault()}
               />
             </Dropdown>
           </div>
+
 
           {/* Logo */}
           <div className="flex-1 flex justify-center mx-2">
