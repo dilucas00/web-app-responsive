@@ -4,23 +4,7 @@ import AddTransaction from './AddTransaction';
 import CardBalance from './CardBalance';
 
 function FinanceManager() {
-  const [transactions, setTransactions] = useState([
-    {
-      category: "Mercado",
-      date: "16-02-2025",
-      value: -80,
-      icon: "bx bxs-cart",
-      color: "white"
-    },
-    {
-      category: "Transporte",
-      date: "12-02-2025",
-      value: -20,
-      icon: "bx bxs-car",
-      color: "text-green"
-    },
-   
-  ]);
+  const [transactions, setTransactions] = useState([]);
 
   // Calcula os totais
   const totalBalance = transactions.reduce((acc, transaction) => acc + transaction.value, 0);
