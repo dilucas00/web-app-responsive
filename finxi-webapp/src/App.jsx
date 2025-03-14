@@ -1,7 +1,7 @@
 import "./App.css"
 import React from 'react';
 import Home from "./components/Home"
-import Login from "./components/Register"
+import Register from "./components/Register"
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import 'antd/dist/reset.css'; 
 

@@ -8,8 +8,8 @@ function SideBarM() {
   const [dropdownOpen, setDropdownOpen] = useState(false); // Renomeie o estado
   const navigate = useNavigate();
 
-  const handleLoginClick = () => {
-    navigate('/login');
+  const handleRegisterClick = () => {
+    navigate('/register');
   };
 
   // Estrutura do menu usando a sintaxe do Ant Design v5+
@@ -19,7 +19,7 @@ function SideBarM() {
       label: (
         <div className="flex items-center gap-3 text-base font-medium text-gray-700 px-6 py-4 hover:bg-gray-50/80">
           <i className="bx bx-user-circle text-xl text-[#0F2A3D]"></i>
-          <span onClick={handleLoginClick}>Meu Perfil</span>
+          <span onClick={handleRegisterClick}>Meu Perfil</span>
         </div>
       ),
     },
