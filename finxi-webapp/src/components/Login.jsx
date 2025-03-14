@@ -13,7 +13,7 @@ function Login(){
     return(
        <div className='w-full bg-[#112942] h-auto'>
         <div className='flex flex-col justify-center items-center content-center    '>
-            <img src="/finxi-logo.png" className='w-60 h-60' alt="" />
+            <img src="/icons/finxi-logo.png" className='w-60 h-60' alt="" />
         </div>
         <div>
             <div className='flex flex-col items-center gap-8'>
@@ -110,10 +110,10 @@ function Login(){
             </div>
             <div className='flex flex-row gap-5 justify-center items-center h-30'>
                 <div className='m-2 w-25 h-15 bg-transparent flex justify-center items-center shadow shadow-black cursor-pointer hover:scale-105 transition'>
-                    <img src="/icons8-facebook-48.png" alt="" />
+                    <img src="/icons/icons8-facebook-48.png" alt="" />
                 </div>
                 <div className='m-2 w-25 bg-transparent h-15 flex justify-center items-center shadow shadow-black cursor-pointer hover:scale-105 transition'>
-                    <img src="/icons8-google-logo-32.png" className='w-10 h-10' alt="" />
+                    <img src="/icons/icons8-google-logo-32.png" className='w-10 h-10' alt="" />
                 </div>
             </div>
         </div>

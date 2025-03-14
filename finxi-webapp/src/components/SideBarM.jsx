@@ -57,7 +57,7 @@ function SideBarM() {
             >
               {/* Remova o onClick e o e.preventDefault() */}
               <img 
-                src="/Menu.png" 
+                src="/icons/Menu.png" 
                 alt="Dropdown Menu"
                 className="w-7 h-7 cursor-pointer active:opacity-70 transition-opacity hover:scale-110"
               />
@@ -68,7 +68,7 @@ function SideBarM() {
           {/* Logo */}
           <div className="flex-1 flex justify-center mx-2">
             <img 
-              src="/finxi-logo.png" 
+              src="/icons/finxi-logo.png" 
               alt="Finxi Logo" 
               className="h-50 w-auto object-contain flex-shrink-0" 
               style={{ minWidth: '140px' }} 
