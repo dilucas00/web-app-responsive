@@ -77,7 +77,7 @@ function Login() {
             <div className='flex items-centercenter justify-center pt-5 w-full'>
                 <p className='text-white font-montserrat text-xl '>Ou faça login com:</p>
             </div>
-            <div className='flex flex-row gap-5 justify-center items-center h-30'>
+            <div className='flex flex-row gap-5 justify-center items-center h-30 border-b-1 border-gray-600'>
                 <div className='m-2 w-25 h-15 bg-transparent flex justify-center items-center shadow shadow-black cursor-pointer hover:scale-105 transition'>
                     <img src="/icons/icons8-facebook-48.png" alt="" />
                 </div>
@@ -87,7 +87,7 @@ function Login() {
             </div>
         </div>
         <footer>
-            <div className='flex justify-center items-center border-t-1 border-gray-600 font-montserrat text-xl p-5 text-white'>
+            <div className='flex mt-5 justify-center items-center  font-montserrat text-xl p-5 text-white'>
                 <p>Esqueceu sua senha? Clique <a className='font-bold cursor-pointer text-[#7BDAA5] '> aqui </a></p>
             </div>
         </footer>
