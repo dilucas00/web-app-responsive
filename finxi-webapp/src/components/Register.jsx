@@ -2,8 +2,7 @@ import React from 'react'
 import "../Login.css"
 import { useNavigate } from 'react-router-dom';
 
-
-function Login(){
+function Register(){
     const navigate = useNavigate();
 
     const handleHomeClick = () => {
@@ -20,8 +19,6 @@ function Login(){
                 <div className='flex items-center justify-center w-full'>
                     <h4 className='text-white text-2xl font-oswald'>Crie sua conta</h4>
                 </div>
-
-      
 
                 {/* INPUT EMAIL */}
                 <div
@@ -49,7 +46,6 @@ function Login(){
                 </div>
 
                 {/* INPUT SENHA */}
-
                 <div
                 className="shadow-lg flex gap-2 items-center bg-white p-2 hover:shadow-xl  duration-300 hover:border-2 border-gray-400 group rounded-md"
                 >
@@ -99,8 +95,6 @@ function Login(){
                 />
                 </div>
 
-                
-
                 <div className='m-5'>
                     <button onClick={handleHomeClick} className='bg-[#7BDAA5] text-white w-65 h-10 text-sm font-bold shadow-black shadow font-montserrat cursor-pointer hover:scale-105 transition'>Cadastrar</button>
                 </div>
@@ -123,8 +117,7 @@ function Login(){
             </div>
         </footer>
        </div>
-        
     )
 }
 
-export default Login;
+export default Register;
