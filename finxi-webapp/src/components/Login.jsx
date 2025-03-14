@@ -10,7 +10,7 @@ function Login() {
     };
 
     return(
-        <div className='w-full bg-[#112942] h-auto'>
+        <div className='w-full bg-[#112942] h-252'>
         <div className='flex flex-col justify-center items-center content-center    '>
             <img src="/icons/finxi-logo.png" className='w-60 h-60' alt="" />
         </div>
